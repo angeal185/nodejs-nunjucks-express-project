@@ -1,0 +1,30 @@
+{
+  "name": "nunjuckswebsite",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "async": "^1.5.0",
+    "consolidate": "^0.14.1",
+    "dotenv": "^2.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-plumber": "^1.1.0",
+    "keystone": "^0.3.19",
+    "lodash": "^4.13.1",
+    "nunjucks": "^1.0.5",
+    "stylus": "^0.53.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.12.0",
+    "eslint-config-keystone": "^2.3.1",
+    "eslint-plugin-react": "^5.1.1",
+    "gulp": "^3.7.0",
+    "gulp-shell": "^0.5.0",
+    "gulp-watch": "^4.3.5",
+    "gulp-stylus": "^2.1.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node app.js"
+  }
+}

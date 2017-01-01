@@ -1,0 +1,25 @@
+{
+  "name": "nodeapp",
+  "description": "",
+  "main": "app.js",
+  "authors": "ben eaves",
+  "license": "MIT",
+  "homepage": "angeal185.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "alertify.js": "^0.3.11",
+    "jquery": "^3.1.1",
+    "masonry": "^4.1.1",
+    "imagesloaded": "^4.1.1",
+    "isotope": "^3.0.1",
+    "hover": "^2.1.0",
+    "wow": "wowjs#^1.1.2"
+  }
+}
