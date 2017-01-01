@@ -1,0 +1,80 @@
+<script src="/js/jquery-2.1.1.js"></script>	
+<script src="/js/royal_preloader.min.js"></script>
+<script src="/js/scroll.js"></script>
+<script src="/js/jquery.easing.js"></script>
+<script src="/js/menu.js"></script>	
+<script src="/js/jquery.fs.tipper.min.js"></script> 
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/portfolio-ajax.js"></script> 
+<script src="/js/jquery.fitvids.js"></script> 
+<script src="/js/jquery.parallax-1.1.3.js"></script>	
+<script src="/js/jquery.chaffle.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.js"></script> 
+<script src="/js/isotope.js"></script>
+<script src="/js/portfolio-ajax.js"></script>
+<script src="/js/jquery.counterup.min.js"></script>
+<script src="/js/waypoints.min.js"></script>
+<script src="/js/scrollReveal.js"></script>
+<script src="/components/alertify.js/lib/alertify.js"></script>
+<script src="/components/wow/dist/wow.min.js"></script>
+
+<script type="text/javascript">
+
+
+(function($) { "use strict";
+            Royal_Preloader.config({
+                mode:           'text', // 'number', "text" or "logo"
+                text:           'F A S T E R !',
+                timeout:        0,
+                showInfo:       true,
+                opacity:        1,
+                background:     ['#FFFFFF']
+            });
+})(jQuery);
+(function($) { "use strict";
+      window.scrollReveal = new scrollReveal();
+})(jQuery);
+(function($) { "use strict";          
+			jQuery(document).ready(function() {
+				var offset = 350;
+				var duration = 500;
+				jQuery(window).scroll(function() {
+					if (jQuery(this).scrollTop() > offset) {
+						jQuery('.scroll-to-top').fadeIn(duration);
+					} else {
+						jQuery('.scroll-to-top').fadeOut(duration);
+					}
+				});
+				
+				jQuery('.scroll-to-top').click(function(event) {
+					event.preventDefault();
+					jQuery('html, body').animate({scrollTop: 0}, duration);
+					return false;
+				})
+			});
+})(jQuery);
+
+(function($) { "use strict"; 
+	$(".container").fitVids();	
+})(jQuery);
+
+(function($) { "use strict";
+	$(document).ready(function() {
+	  $('.chaffle').chaffle({
+		speed: 10,
+		time: 60
+	  });
+	}); 
+})(jQuery);
+
+
+$('').attr('class','hvr-buzz');
+
+new WOW().init();
+
+</script>	
+ 	  
+{% if ENV_DEVELOPMENT %}
+
+{% endif %}

@@ -1,0 +1,10 @@
+<div class="nine columns">
+<div class="blog-box-1 black-background photo" data-ks-editable="editable(user, { list: " Post ", id: post.id })" style="width:80%;">
+	{% if post.publishedDate %}
+	<div class="date"><p><span>{{ post._.publishedDate.format("DD") }}/</span>{{ post._.publishedDate.format("MMMM YYYY") }}{% endif %} <em>{{ post.author.name.first }}</em></p></div>
+{% if post.image.exists %}<a href="post.html" class="animsition-link"><img src="{{ post._.image.fit(160,160) }}"></a>{% endif %}
+	<a href="/blog/post/{{ post.slug }}" class="animsition-link"><h6>{{ post.title }}</h6></a>
+	<div class="p-box"><p>{{ post.content.brief|safe }}</p></div>
+	<a href="/blog/post/{{ post.slug }}" class="animsition-link blog-link chaffle" data-lang="en">read more</a>
+</div>
+</div>

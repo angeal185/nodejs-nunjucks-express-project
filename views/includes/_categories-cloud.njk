@@ -1,0 +1,7 @@
+﻿<div class="separator-sidebar"></div>
+{% if data.categories.length %}<h6 class="chaffle" data-lang="en">Categories</h6>
+<div class="link-tag list-group">
+	{% for cat in data.categories %} {% set class = ( "active" if data.category and data.category.id == cat.id else "" ) %}
+		<a href="/blog/{{ cat.key }}" class="{{ class }} list-group-item">{{ cat.name }}</a>
+	{% endfor %}
+</div>{% endif %}	

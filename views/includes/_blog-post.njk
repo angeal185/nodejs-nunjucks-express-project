@@ -1,0 +1,26 @@
+<div class="nine columns">
+<div class="blog-box-1 black-background photo" style="width:80%;">
+{% if not data.post %}<h2>Invalid Post.</h2>
+{% else %}
+	<h1>{{ data.post.author.name.first }}</h1>	
+	{% if data.post.publishedDate %}
+		<h5 class="chaffle" data-lang="en">{{ data.post._.publishedDate.format("DD MMMM YYYY") }}</h5>
+	{% endif %}
+{% if data.post.image.exists %}<div class="img-wrap">
+		<img src="{{ data.post._.image.fit(750,450) }}">	
+	</div>{% endif %}
+	
+	<div class="post-block">
+{% if data.post.categories and data.post.categories.length %}
+{{ data.post.content.full|safe }}			
+		<div class="tags-block grey-background"><p>Cat:
+{% for cat in data.post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < data.post.categories.length %} - {% endif %}{% endfor %}{% endif %}
+{% if data.post.author %}<a href="#" class="autor-link">By: {{ data.post.author.name.first }}</a>{% endif %}
+Tag:
+		{% for cat in data.post.tags %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < data.post.tags.length %} - {% endif %}{% endfor %}
+		</p></div>
+{% endif %}	<a class="chaffle" data-lang="en" href="/blog">&larr; back to blog main</a>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>

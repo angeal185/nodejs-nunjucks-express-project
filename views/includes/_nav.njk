@@ -1,0 +1,39 @@
+<nav>
+	<div class="cd-primary-nav">
+		<ul class="cd-scndr-nav">
+			<li class="cd-label"><a href="#">Portfolio</a>
+				<ul>
+					<li><a href="/">featured slider</a></li>
+					<li><a href="/index1">featured parallax</a></li>
+					<li><a href="/index2">featured html video</a></li>
+					<li><a href="/index3">fullwidth slider</a></li>
+					<li><a href="/index4">fullwidth parallax</a></li>
+					<li><a href="/index5">fullwidth html video</a></li>
+				</ul>
+			</li>
+			<li class="cd-label"><a href="/about">About</a></li>
+			<li class="cd-label"><a href="/blog">Blog</a></li>
+			<li class="cd-label"><a href="/gallery">Gallery</a></li>
+			<li class="cd-label"><a href="/contact">Contact</a></li>
+			{% if user and user.canAccessKeystone %}
+			<li class="cd-label"><a href="/keystone" class="btn btn-lg btn-primary">Admin</a></li>
+			<li class="cd-label"><a href="/keystone/signout">Logout</a></li>
+			{% else %}
+			<li class="cd-label"><a href="/keystone/signin">Login</a></li>
+			{% endif %}
+		</ul>	
+		<div class="social-nav">
+			<ul class="list-social-nav">
+				<li class="icon-soc-nav tipped" data-title="codepen"  data-tipper-options='{"direction":"top","follow":"true"}'>
+					<a href="#">&#xf1cb;</a>
+				</li>
+				<li class="icon-soc-nav tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
+					<a href="#">&#xf09b;</a>
+				</li>
+				<li class="icon-soc-nav tipped" data-title="linkedin" data-tipper-options='{"direction":"top","follow":"true"}'>
+					<a href="#">&#xf08c;</a>
+				</li>
+			</ul>	
+		</div>			
+	</div>
+</nav>

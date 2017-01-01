@@ -1,0 +1,15 @@
+﻿{% extends 'layout.njk' %}
+{% block content %}
+<main class="cd-main">
+{% include 'includes/_parallax-image.njk' %}
+{% include 'includes/_animated-grid.njk' %}
+{% include 'includes/_split-row-info.njk' %}
+{% include 'includes/_images-callout.njk' %}
+{% include 'includes/_counter-grid.njk' %}
+{% include 'includes/_services-grid.njk' %}
+{% include 'includes/_parallax-slider.njk' %}
+</main>
+{% endblock %}
+{% block scripts %}
+<script src="/js/custom-about.js"></script>
+{% endblock %}

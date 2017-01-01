@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+{% block content %}
+<main class="cd-main">
+{% include 'includes/_blog-parallax.njk' %}
+<div class="clear"></div>
+<div class="section padding-top-bottom white-background" id="scroll-link">					
+	<div class="container">	
+{% macro blogPost(post) %}
+{% include 'includes/_macro-blog.njk' %}
+{% endmacro %}
+{% include 'includes/_blog-conditional.njk' %}
+{% include 'includes/_blog-sidebar.njk' %}
+</div>
+</div>
+</main>
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript" src="js/custom-blog.js"></script>
+{% endblock %}

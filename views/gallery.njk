@@ -1,0 +1,46 @@
+{% extends "layout.njk" %}
+{% block content %}
+<main class="cd-main">
+{% include 'includes/_blog-parallax.njk' %}
+<div class="clear"></div>
+<div class="section padding-top-bottom white-background" id="scroll-link">					
+	<div class="container">	
+		{% if galleries.length %}
+		{% for gallery in galleries %}
+		<h2 class="chaffle" data-lang="en">{{ gallery.name }}
+		{% if gallery.publishedDate %}
+			<span>{{ gallery._.publishedDate.format("DD MMMM YYYY") }}</span>
+		{% endif %}
+		</h2>
+		<div class="row">
+		{% if gallery.heroImage.exists %}
+			<div class="blog-box-1 black-background">
+				<img src="{{ gallery._.heroImage.limit(680,680) }}" class="hvr-buzz">
+			</div>
+			<div class="row">
+		{% for image in gallery.images %}
+				<div class="blog-box-1 black-background">
+					<img src="{{ image.limit(300,300) }}" class="hvr-buzz">
+				</div>
+		{% endfor %}
+			</div>
+		{% else %}
+		{% for image in gallery.images %}
+				<div class="blog-box-1 black-background">
+					<img src="{{ image.limit(300,300) }}" class="hvr-buzz">
+				</div>
+		{% endfor %}
+		{% endif %}
+		</div>
+		{% endfor %}
+		{% else %}
+		<h3 class="chaffle" data-lang="en">There are no image galleries yet.</h3>
+		{% endif %}
+	</div>
+</div>
+</div>
+</main>
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript" src="js/custom-blog.js"></script>
+{% endblock %}

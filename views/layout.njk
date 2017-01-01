@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{language}}">
+<head>
+{% include 'includes/_meta.njk' %}  
+{% include 'includes/_styles.njk' %}
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/ionicons.css">
+<link rel="stylesheet" href="/css/owl.carousel.css">
+<link rel="stylesheet" href="/css/owl.transitions.css">
+<link rel="stylesheet" href="/components/alertify.js/themes/alertify.css">
+<link rel="stylesheet" href="/components/alertify.js/themes/alertify.core.css">
+<link rel="stylesheet" href="/components/wow/css/libs/animate.css">
+<link rel="stylesheet" href="/components/hover/css/hover-min.css">
+{% block stylesheet %}{% endblock %}
+{% block style %}{% endblock %} 
+</head>
+<body class="royal_loader">
+{% include 'includes/_header.njk' %}
+{% include 'includes/_nav.njk' %}
+{% block header %}{% endblock %}
+{% block intro %}{% endblock %}
+{% block content %}{% endblock %}
+
+{% block footer %}{% endblock %}
+{% include 'includes/_footer.njk' %}
+
+{% include 'includes/_scripts.njk' %}
+{% block scripts %}{% endblock %}
+<script>
+$('body').get(alertify.log("{{title}}"));
+$('.icon-soc, .icon-soc-nav ').addClass("hvr-pulse-grow");
+
+</script>
+</body>
+</html>
