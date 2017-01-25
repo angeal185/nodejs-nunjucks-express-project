@@ -2,6 +2,7 @@
 nodejs portfolio type website created with express nunjucks stylus and keystone admin 
 
 ```sh
+-import db
 
 $ npm install
 $ bower install
